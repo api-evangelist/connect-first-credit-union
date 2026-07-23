@@ -1,0 +1,99 @@
+aid: connect-first-credit-union
+name: connectFirst Credit Union
+review:
+  question: Does connectFirst Credit Union expose a first-party public developer API or developer portal?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    connectFirst Credit Union publishes no first-party public API and no
+    developer portal. It is a member-owned Alberta cooperative credit union
+    (formed 2021 by amalgamating four Alberta credit unions) whose members
+    approved a merger with Servus Credit Union; the legal amalgamation closed
+    May 1, 2024 as "Connect First and Servus Credit Union Ltd." and the brand
+    realigned to Servus Credit Union in January 2025. The connectfirstcu.com
+    root now 301-redirects to servus.ca. Consistent with the honest posture of
+    most Canadian credit unions, consumer data access is aggregator-based
+    (Plaid coverage confirmed) rather than via a first-party data-sharing API.
+    Digital banking is delivered through the Celero Xpress platform (powered by
+    ebankIT) over the Central 1 / Celero cooperative banking-technology stack.
+    No downloadable OpenAPI/Swagger, no OAuth2/OIDC developer authorization
+    surface, and no documented FDX membership were found. Canada has no
+    operational open-banking mandate — the federal Consumer-Driven Banking
+    framework (Budget 2024, FCAC-overseen) is legislated but not yet live — and
+    the U.S. Section 1033 rule does not apply to a Canadian institution.
+  posture:
+    firstPartyDeveloperPortal: false
+    developerPortalUrl: null
+    downloadableSpecs: false
+    specProvenance: none
+    authModel: none-documented
+    fdxParticipant: false
+    section1033Posture: not-applicable-canadian-institution
+    consumerDrivenBankingPosture: none-published-framework-not-yet-operational
+    aggregatorAccess: true
+    aggregators:
+      - Plaid
+    bankingTechnology:
+      - Celero (Celero Xpress digital banking)
+      - ebankIT (digital banking platform vendor)
+      - Central 1 (cooperative banking-technology / core ecosystem)
+    canadianRails:
+      interac: participant-no-public-api
+      paymentsCanada: participant-no-public-api
+    charterType: provincial-credit-union-cooperative
+    jurisdiction: Alberta, Canada
+    corporateStatus: merged-into-servus-credit-union-2024-05-01
+  probes:
+    - url: https://developer.connectfirstcu.com
+      httpStatus: 0
+      note: Does not resolve (no DNS / no connection).
+    - url: https://developers.connectfirstcu.com
+      httpStatus: 0
+      note: Does not resolve.
+    - url: https://api.connectfirstcu.com
+      httpStatus: 0
+      note: Does not resolve.
+    - url: https://www.connectfirstcu.com/
+      httpStatus: 301
+      note: Redirects to https://servus.ca/ following the 2024 merger.
+    - url: https://connectfirstcu.com/en/news/news-and-announcments/servus-credit-union-announces-brand-and-legal-name-alignment
+      httpStatus: 200
+      note: Legacy news subpaths still resolve; documents the Servus brand/legal-name alignment (Jan 2025).
+    - url: https://www.linkedin.com/company/connect-first-credit-union
+      httpStatus: 200
+      note: Company LinkedIn presence.
+    - url: https://servus.ca/privacy
+      httpStatus: 200
+      note: Successor-entity privacy policy now governing connectFirst members.
+  transports:
+    - protocol: REST
+      documented: false
+      note: No public first-party REST API is documented.
+    - protocol: OpenAPI
+      documented: false
+      note: No downloadable OpenAPI/Swagger definition is published.
+sources:
+  - url: https://en.wikipedia.org/wiki/ConnectFirst_Credit_Union
+    type: Reference
+    note: Charter, 2021 four-way amalgamation, Calgary HQ, ~$6B AUA, 128k members, 41 branches, Servus merger vote.
+  - url: https://servus.ca/newsroom/2025/04/servus-credit-union-announces-brand-and-legal-name-alignment
+    type: PressRelease
+    note: Brand and legal name alignment to Servus Credit Union (2025).
+  - url: https://finance.yahoo.com/news/connect-first-servus-credit-union-140000030.html
+    type: PressRelease
+    note: Merger closed May 1, 2024 as Connect First and Servus Credit Union Ltd.; ~$29.3B assets, 600k+ members.
+  - url: https://fintable.io/coverage/banks/United%20States/4256226_connectfirst-credit-union
+    type: Reference
+    note: Third-party account/transaction data access surfaced via Plaid aggregator, not a first-party API.
+  - url: https://www.connectfirstcu.com/en/news/news-and-announcments/connect-first-credit-union-leads-the-way-in-digital-banking-innovation-launching-celero-xpress-powered-by-ebankit
+    type: PressRelease
+    note: Celero Xpress digital banking (powered by ebankIT) — vendor-delivered, not a self-published API.
+actions:
+  apisYmlUpdated: true
+  reason: |
+    Identity-only (built-stub) record. No public API exists to catalog, so
+    apis[] is empty and only verified live company links are recorded in
+    common[]. Aggregator-only consumer access and the merged-into-Servus status
+    are captured honestly rather than fabricating an endpoint or spec.

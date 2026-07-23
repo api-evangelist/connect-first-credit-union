@@ -1,0 +1,49 @@
+aid: connect-first-credit-union
+url: https://raw.githubusercontent.com/api-evangelist/connect-first-credit-union/refs/heads/main/apis.yml
+name: connectFirst Credit Union
+kind: company
+description: >-
+  connectFirst Credit Union is a member-owned, cooperative (Schedule-equivalent
+  provincial credit union) financial institution headquartered in Calgary,
+  Alberta, formed on May 3, 2021 by amalgamating four Alberta credit unions
+  (First Calgary Financial, Chinook Financial, Mountain View Financial, and
+  Legacy Financial). At its peak it held over CAD $6 billion in assets under
+  administration and served more than 128,000 members across 41 branches in
+  Central and Southern Alberta, offering retail, commercial, agricultural, and
+  dealer-services banking. Members voted in November 2023 to merge with Servus
+  Credit Union; the legal amalgamation closed May 1, 2024 as "Connect First and
+  Servus Credit Union Ltd." (~CAD $29.3B assets, 600,000+ members), and the
+  unified brand realigned to Servus Credit Union in January 2025 — the
+  connectfirstcu.com domain now 301-redirects to servus.ca. Its open-finance
+  posture is honest and typical of a Canadian credit union: no first-party
+  public developer portal or downloadable OpenAPI, digital banking delivered via
+  the Celero Xpress platform (powered by ebankIT) with core/banking-tech through
+  the Central 1 / Celero cooperative ecosystem, and third-party consumer data
+  access available only through aggregators (Plaid coverage confirmed). Canada's
+  federal Consumer-Driven Banking framework (Budget 2024 / FCAC-overseen) is
+  legislated but not yet operational, so no mandated open-banking API exists.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Financial Services
+- Banking
+- Canada
+- Credit Union
+- Alberta
+- Cooperative
+- Data Aggregation
+created: '2026-07-23'
+modified: '2026-07-23'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: Website
+  url: https://www.connectfirstcu.com/
+- type: Blog
+  url: https://connectfirstcu.com/en/news/news-and-announcments
+- type: LinkedIn
+  url: https://www.linkedin.com/company/connect-first-credit-union
+- type: PrivacyPolicy
+  url: https://servus.ca/privacy
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
