@@ -1,0 +1,43 @@
+generated: '2026-07-23'
+method: searched
+source: live probes of https://www.connectfirstcu.com/.well-known/*
+note: >-
+  The connectFirst website origin (Umbraco CMS) still answers .well-known
+  discovery paths even though the site root 301-redirects to servus.ca after the
+  2024 Servus merger. The OAuth/OIDC surface exposed here is Umbraco's built-in
+  member-authentication (Delivery API "member" security) for the public website —
+  NOT a first-party open-banking / developer data API. The Umbraco Content
+  Delivery API itself is disabled (swagger + /umbraco/delivery/api/v1/content both
+  301 to /not-found/). No security.txt, api-catalog, or ai-plugin is published.
+host: www.connectfirstcu.com
+entries:
+- path: /.well-known/openid-configuration
+  status: 200
+  content_type: application/json
+  file: connect-first-credit-union-openid-configuration.json
+  type: openid-configuration
+  note: OIDC discovery document for Umbraco member authentication.
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  content_type: application/json
+  file: connect-first-credit-union-oauth-authorization-server.json
+  type: oauth-authorization-server
+  note: RFC 8414 metadata; identical endpoint set to the OIDC discovery doc.
+- path: /.well-known/jwks
+  status: 200
+  content_type: application/json
+  file: connect-first-credit-union-jwks.json
+  type: jwks
+  note: Single RS256 signing key for the member-auth issuer.
+- path: /.well-known/security.txt
+  status: 404
+  note: No RFC 9116 security.txt published.
+- path: /.well-known/api-catalog
+  status: 404
+  note: No RFC 9727 api-catalog published.
+- path: /.well-known/ai-plugin.json
+  status: 404
+  note: No AI plugin manifest published.
+- path: /.well-known/oauth-protected-resource
+  status: 404
+  note: No RFC 9728 protected-resource metadata published.

@@ -1,0 +1,45 @@
+generated: '2026-07-23'
+method: derived
+source: well-known/connect-first-credit-union-openid-configuration.json
+note: >-
+  Conformance assertions derived strictly from the discovered .well-known
+  documents. Scope is the Umbraco member-authentication surface only; connectFirst
+  publishes no open-banking API, so open-finance regimes (FDX, FAPI, PSD2, CDR,
+  Canada Consumer-Driven Banking) are not applicable / not implemented.
+standards:
+- id: oidc
+  name: OpenID Connect Core 1.0
+  conforms: true
+  evidence: >-
+    Live OIDC discovery document at /.well-known/openid-configuration advertises
+    authorization_code flow, code response type, RS256 id_token signing, and a
+    jwks_uri. This is CMS member auth, not a banking data API.
+- id: oauth2
+  name: OAuth 2.0 (RFC 6749)
+  conforms: true
+  evidence: >-
+    authorization_code + refresh_token grant types with token and revocation
+    (RFC 7009) endpoints.
+- id: oauth2_metadata
+  name: OAuth 2.0 Authorization Server Metadata (RFC 8414)
+  conforms: true
+  evidence: /.well-known/oauth-authorization-server returns 200 with full server metadata.
+- id: pkce
+  name: PKCE (RFC 7636)
+  conforms: true
+  evidence: code_challenge_methods_supported includes S256.
+- id: fapi
+  name: Financial-grade API (FAPI)
+  conforms: false
+  evidence: >-
+    Token endpoint auth is client_secret_basic/post and PKCE 'plain' is allowed;
+    no mTLS, no private_key_jwt, no PAR. Not FAPI-hardened (expected — this is
+    website member login, not a financial API).
+- id: fdx
+  name: Financial Data Exchange (FDX)
+  conforms: false
+  evidence: No documented FDX membership or FDX API. Consumer data access is aggregator-based (Plaid).
+- id: consumer_driven_banking_ca
+  name: Canada Consumer-Driven Banking (Budget 2024, FCAC)
+  conforms: false
+  evidence: Framework legislated but not yet operational; no mandated open-banking API exists.

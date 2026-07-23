@@ -36,6 +36,18 @@ modified: '2026-07-23'
 specificationVersion: '0.19'
 apis: []
 common:
+- type: DomainSecurity
+  url: security/connect-first-credit-union-domain-security.yml
+- type: WellKnown
+  url: well-known/connect-first-credit-union-well-known.yml
+- type: Authentication
+  url: authentication/connect-first-credit-union-authentication.yml
+- type: OAuthScopes
+  url: scopes/connect-first-credit-union-scopes.yml
+- type: Conformance
+  url: conformance/connect-first-credit-union-conformance.yml
+- type: LLMsTxt
+  url: llms/connect-first-credit-union-llms.txt
 - type: Website
   url: https://www.connectfirstcu.com/
 - type: Blog

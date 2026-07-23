@@ -1,0 +1,16 @@
+generated: '2026-07-23'
+method: searched
+source: https://www.connectfirstcu.com/.well-known/openid-configuration
+note: >-
+  The only OAuth scopes advertised are the two standard OIDC scopes exposed by
+  Umbraco member authentication. No banking/data-access scopes exist; there is no
+  public developer authorization surface.
+issuer: https://www.connectfirstcu.com/
+flow: authorization_code
+scopes:
+- name: openid
+  description: Standard OpenID Connect scope requesting an ID token for the member.
+  standard: true
+- name: offline_access
+  description: Requests a refresh token so the member session can be renewed without re-authentication.
+  standard: true

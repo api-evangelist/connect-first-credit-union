@@ -1,0 +1,30 @@
+# connectFirst Credit Union
+
+> connectFirst Credit Union was a member-owned Alberta cooperative financial institution headquartered in Calgary, formed May 3, 2021 by amalgamating four Alberta credit unions (First Calgary Financial, Chinook Financial, Mountain View Financial, Legacy Financial). Members approved a merger with Servus Credit Union; the legal amalgamation closed May 1, 2024 as "Connect First and Servus Credit Union Ltd." and the brand realigned to Servus Credit Union in January 2025. The connectfirstcu.com root now 301-redirects to servus.ca.
+
+## API & open-finance posture
+
+- No first-party public developer portal, no downloadable OpenAPI/Swagger, and no documented FDX membership.
+- Consumer data access is aggregator-based (Plaid coverage confirmed), not a first-party data-sharing API.
+- Digital banking is delivered through the Celero Xpress platform (powered by ebankIT) over the Central 1 / Celero cooperative banking-technology stack.
+- Canada's federal Consumer-Driven Banking framework (Budget 2024, FCAC-overseen) is legislated but not yet operational; no mandated open-banking API exists. U.S. Section 1033 does not apply to a Canadian institution.
+
+## Discovered machine-readable surface
+
+The Umbraco CMS website origin still answers OAuth/OIDC discovery paths (member login for the public site, not a banking API):
+
+- [OpenID configuration](https://www.connectfirstcu.com/.well-known/openid-configuration): OIDC discovery, authorization_code + PKCE (S256), RS256.
+- [OAuth authorization server metadata](https://www.connectfirstcu.com/.well-known/oauth-authorization-server): RFC 8414 metadata.
+- [JWKS](https://www.connectfirstcu.com/.well-known/jwks): single RS256 signing key.
+- Scopes advertised: openid, offline_access.
+
+## Company
+
+- [Website / Servus successor](https://servus.ca/)
+- [Legacy news & announcements](https://connectfirstcu.com/en/news/news-and-announcments)
+- [LinkedIn](https://www.linkedin.com/company/connect-first-credit-union)
+- [Privacy policy (Servus)](https://servus.ca/privacy)
+
+## Notes
+
+- This profile is an honest identity-and-discovery record. No public banking API exists to catalog; artifacts capture only what was verifiably fetched from live hosts.
