@@ -24,6 +24,14 @@ description: >-
   legislated but not yet operational, so no mandated open-banking API exists.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
+- Financial-Services
+- Banking
+- Canada
+- Credit Union
+- Alberta
+- Cooperative
+- Data Aggregation
+tags_raw:
 - Financial Services
 - Banking
 - Canada
