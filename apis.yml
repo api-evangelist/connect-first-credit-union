@@ -22,6 +22,17 @@ description: >-
   access available only through aggregators (Plaid coverage confirmed). Canada's
   federal Consumer-Driven Banking framework (Budget 2024 / FCAC-overseen) is
   legislated but not yet operational, so no mandated open-banking API exists.
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
 - Financial-Services
