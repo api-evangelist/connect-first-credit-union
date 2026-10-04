@@ -50,13 +50,12 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - Canada
 - Credit Union
 - Alberta
 - Cooperative
-- Data Aggregation
 tags_raw:
 - Financial Services
 - Banking
@@ -64,7 +63,7 @@ tags_raw:
 - Credit Union
 - Alberta
 - Cooperative
-- Data Aggregation
+- Financial-Services
 created: '2026-07-23'
 modified: '2026-07-23'
 specificationVersion: '0.23'
@@ -93,3 +92,5 @@ common:
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
+x-tags-removed:
+- Data Aggregation
