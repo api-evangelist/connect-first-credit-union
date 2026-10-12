@@ -1,0 +1,18 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/connect-first-credit-union/integrations
+- https://zapier.com/apps/connectfirst-credit-union/integrations
+- https://n8n.io/integrations/connect-first-credit-union/
+- https://composio.dev/toolkits/connect-first-credit-union
+- https://monid.ai/tools/connect-first-credit-union
+checked:
+- https://composio.dev/toolkits/connect-first-credit-union
+- https://monid.ai/tools/connect-first-credit-union
+- https://n8n.io/integrations/connect-first-credit-union/
+- https://zapier.com/apps/connect-first-credit-union/integrations
+- https://zapier.com/apps/connectfirst-credit-union/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
