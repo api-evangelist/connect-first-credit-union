@@ -1,4 +1,4 @@
-# connectFirst Credit Union (connect-first-credit-union)
+# connectFirst Credit Union
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,49 +64,88 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-connectFirst Credit Union is a member-owned, cooperative financial institution headquartered in Calgary, Alberta, formed on May 3, 2021 by amalgamating four Alberta credit unions (First Calgary Financial, Chinook Financial, Mountain View Financial, and Legacy Financial). At its peak it held over CAD $6 billion in assets under administration and served more than 128,000 members across 41 branches in Central and Southern Alberta.
+connectFirst Credit Union is a member-owned, cooperative (Schedule-equivalent provincial credit union) financial institution headquartered in Calgary, Alberta, formed on May 3, 2021 by amalgamating four Alberta credit unions (First Calgary Financial, Chinook Financial, Mountain View Financial, and Legacy Financial). At its peak it held over CAD $6 billion in assets under administration and served more than 128,000 members across 41 branches in Central and Southern Alberta, offering retail, commercial, agricultural, and dealer-services banking. Members voted in November 2023 to merge with Servus Credit Union; the legal amalgamation closed May 1, 2024 as "Connect First and Servus Credit Union Ltd." (~CAD $29.3B assets, 600,000+ members), and the unified brand realigned to Servus Credit Union in January 2025 — the connectfirstcu.com domain now 301-redirects to servus.ca. Its open-finance posture is honest and typical of a Canadian credit union: no first-party public developer portal or downloadable OpenAPI, digital banking delivered via the Celero Xpress platform (powered by ebankIT) with core/banking-tech through the Central 1 / Celero cooperative ecosystem, and third-party consumer data access available only through aggregators (Plaid coverage confirmed). Canada's federal Consumer-Driven Banking framework (Budget 2024 / FCAC-overseen) is legislated but not yet operational, so no mandated open-banking API exists.
 
-Members voted in November 2023 to merge with Servus Credit Union. The legal amalgamation closed **May 1, 2024** as "Connect First and Servus Credit Union Ltd." (~CAD $29.3B assets, 600,000+ members), and the unified brand realigned to **Servus Credit Union** in January 2025. The `connectfirstcu.com` domain now 301-redirects to `servus.ca`.
+**Areas:** Financial Services · Banking · Canada · Credit Union · Alberta · Cooperative
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/connect-first-credit-union/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/connect-first-credit-union/refs/heads/main/apis.yml)
+## connectFirst Credit Union on APIs.io
 
-## Open-Finance & API Posture
+Everything profiled for connectFirst Credit Union is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/connect-first-credit-union/](https://apis.io/providers/connect-first-credit-union/)** — or go straight to one of the APIs or properties below.
 
-- **No first-party developer portal.** Probes of `developer.connectfirstcu.com`, `api.connectfirstcu.com`, and `developers.connectfirstcu.com` do not resolve (no DNS/connection). There is no public developer console, API reference, or downloadable OpenAPI/Swagger.
-- **Digital banking** is delivered via the **Celero Xpress** platform (powered by ebankIT), with core and banking-technology through the **Central 1 / Celero** cooperative ecosystem — not a self-published API surface.
-- **Consumer data access is aggregator-based.** Third-party access is available through open-banking aggregators (Plaid coverage is confirmed) rather than a first-party data-sharing API.
-- **Canadian open finance is voluntary.** The federal Consumer-Driven Banking framework (Budget 2024 / Fall Economic Statement 2024, overseen by the FCAC) is legislated but **not yet operational**, so no mandated open-banking API exists for this institution. No documented FDX participation and no stated 1033-style posture (a U.S. construct that does not apply in Canada).
-- **Shared Canadian rails** (Interac e-Transfer, Payments Canada RTR/Lynx) are consumed as a member of the cooperative banking system; no institution-specific API around them is published.
+### Published properties
 
-This is an **identity-only** record: the institution exposes no public API. It is retained under its own slug for lineage, with the note that the operating entity is now Servus Credit Union.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Tags
+#### Security (2)
 
-- Financial Services
-- Banking
-- Canada
-- Credit Union
-- Alberta
-- Cooperative
-- Data Aggregation
+Authentication, trust centre, and vulnerability disclosure.
 
-## Timestamps
+- [Connect First Credit Union Authentication](https://apis.io/security/connect-first-credit-union/connect-first-credit-union-authentication/)
+- [Connect First Credit Union Domain Security](https://apis.io/security/connect-first-credit-union/connect-first-credit-union-domain-security/)
 
-- **Created:** 2026-07-23
-- **Modified:** 2026-07-23
+#### OAuth scopes (1)
 
-## APIs
+The permissions the API asks for.
 
-None. connectFirst Credit Union does not publish a public API or developer portal.
+- [Connect First Credit Union Scopes](https://apis.io/scopes/connect-first-credit-union/connect-first-credit-union-scopes/)
 
-## Common Properties
+## Where to find this API
 
-- [Website](https://www.connectfirstcu.com/) (redirects to servus.ca following the 2024 merger)
-- [Blog / News](https://connectfirstcu.com/en/news/news-and-announcments)
-- [LinkedIn](https://www.linkedin.com/company/connect-first-credit-union)
-- [Privacy Policy](https://servus.ca/privacy) (successor entity)
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-## Maintainers
+- [Website](https://www.connectfirstcu.com/)
+- [Blog](https://connectfirstcu.com/en/news/news-and-announcments)
+- [Privacy policy](https://servus.ca/privacy)
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+## API Evangelist rating
+
+**Kin Score 13.2** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 14.3 |
+| Access clarity | 10.5 |
+
+**Agent readiness 10.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 34.6** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/connect-first-credit-union/](https://apis.io/providers/connect-first-credit-union/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for connectFirst Credit Union: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/connect-first-credit-union/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
